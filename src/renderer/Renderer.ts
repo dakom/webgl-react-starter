@@ -14,11 +14,19 @@ export const setupRenderer = (canvas: HTMLCanvasElement) =>
     
     gl.enable(gl.DEPTH_TEST);
     
+    let lastWidth: number;
+    let lastHeight: number;
+
     const render = (world: World) => {
-      
-      canvas.setAttribute('width', window.innerWidth.toString());
-      canvas.setAttribute('height', window.innerHeight.toString());
-      gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      if (lastWidth !== width || lastHeight !== height) {
+        canvas.setAttribute('width', window.innerWidth.toString());
+        canvas.setAttribute('height', window.innerHeight.toString());
+        gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
+        lastWidth = width;
+        lastHeight = height;
+      }
 
       gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
