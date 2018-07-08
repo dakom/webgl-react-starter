@@ -4,4 +4,4 @@ It also follows a functional / immutable approach, though scaling that up would 
 
 The project was originally created on CodeSandbox: 
 
-[![Edit webgl-react-starter](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/dakom/webgl-react-starter/tree/master/)
+[![Edit webgl-react-starter](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/k0ox52p26r)
