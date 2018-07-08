@@ -13,7 +13,7 @@ export const makeController = () => {
     values[axis] = direction;
     listeners.forEach(fn => fn({
       axis,
-      direction: values[axis]
+      direction
     }));
   }
 
